@@ -1,0 +1,94 @@
+<html>
+  <head>
+    <!--<link rel="stylesheet" type="text/css" href="css/style.css">-->
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>    
+    <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>   
+    <script src="/componentes/pru.js"></script>
+  </head>
+  <body>
+    <!--
+    <div id="container" class="container">
+      <div class="info">
+        <div class="company"><a target="_blank">La niñez en el pueblo</a></div>
+        <div class="title">OTOMI</div>      
+        <a class="button" id="start_experience" href="#">Iniciar experiencia</a>
+        <div class="instructions">
+          Este proyecto usa Realidad Virtual para conocer historias reales de integrantes de una comunidad indigena, presiona el boton verde para conocerlos
+        </div>
+        <div class="instructions">
+          <div><strong>Creado por:</strong></div>          
+          <div>Martin</div>          
+          <div>Elvira</div>          
+          <div>Mariana</div>          
+          <div><strong>Taller</strong>: Publicaciones Digitales</div>
+        </div>
+      </div>
+    </div>
+    -->
+    <a-scene>
+
+      <a-assets>
+        <audio id="i1Sound" src="/sound/museum.mp3" preload="auto" crossorigin="anonymous"></audio>      
+        <audio id="i2Sound" src="/sound/b.mp3" preload="auto" crossorigin="anonymous"></audio>
+        <!--<a-asset-itemo id="i2Sound" src="/sound/b.mp3" response-type="arraybuffer"></a-asset-item>        -->     
+      </a-assets>
+      <a-sound id="voz" src="src: #i2Sound"></a-sound>
+
+      <!-- img1 -->
+      <a-entity>
+        <a-plane id="i1" class="picture" color="#FFF" src="img/i1.png" rotation="0 30 0" position="-2 1.75 -3" height="1.839" width="2.412" scale='1 1 1'>
+          
+          <a-text id="i1Oto"  value="
+          Ma mee mi petkagi ge ha rä 
+          nhini ha mi ʼmui San José 
+          Atlan rä hyodinhini 
+          Nxamado."
+           font="otomi-msdf/otomi-msdf.json" align="center" color="#fff" negate="false" visible="false" position="0.2 1.2 0.55"
+          geometry="primitive: plane; width: 2.85" material="color: #333"></a-text>
+          <a-text id="i1Esp"  value="
+          Mi mamá me contaba que 
+          en el pueblo donde ella 
+          vivía en San José Atlán, 
+          municipio de Huichapan."
+           font="otomi-msdf/otomi-msdf.json" align="center" color="#fff" negate="false" visible="false" position="0.2 -1.2 0.55"
+          geometry="primitive: plane; width: 2.85" material="color: #333"></a-text>
+        </a-plane>
+      </a-entity>
+
+      <!-- img1 -->
+      <a-entity>
+        <a-plane id="i2" class="picture" color="#FFF" src="img/i2.png" rotation="0 -20 0" position="2 1.75 -3" height="1.839" width="2.412" scale='1 1 1'>
+          
+          <a-text id="i2Oto"  value="
+          Hinmi ja rä dehe ha yä nguu.
+          Nubye sti ma ha rä nguntʼudi
+          mʼetʼo dä ñhäxä rä xoni ma 
+          dä ha rä dehe ha mi ʼmai 
+          nʼa rä zexni ja gehni mi 
+          poho rä dehe."
+           font="otomi-msdf/otomi-msdf.json" align="center" color="#fff" negate="false" visible="false" position="0.2 1.2 0.55"
+          geometry="primitive: plane; width: 2.85; height: 1.4" material="color: #333"></a-text>
+          <a-text id="i2Esp"  value="
+          No había agua en las casas y 
+          antes de irse a la escuela 
+          tenía que ir con un cántaro 
+          hasta donde había un árbol 
+          llamado “sabino” y de ahí 
+          brotaba el agua."
+           font="otomi-msdf/otomi-msdf.json" align="center" color="#fff" negate="false" visible="false" position="0.2 -1.2 0.55"
+          geometry="primitive: plane; width: 2.85; height: 1.4" material="color: #333"></a-text>
+        </a-plane>
+      </a-entity>
+
+
+      <a-camera>
+        <a-cursor></a-cursor>
+        <!-- Or <a-entity cursor></a-entity> -->
+      </a-camera>
+      <a-sky src="/img/fondo.jpeg" rotation="0 -130 0"></a-sky>
+    </a-scene>
+
+    <script src="componentes/sel.js"></script>
+    <!--<script src="js/main.js"></script> -->
+  </body>
+</html>
